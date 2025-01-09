@@ -37,7 +37,7 @@ section#login {
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450); /*Borda sem espalhamento*/
     transition: width .3s, heidth .3s; /* Animação entre na troca das telas */
-    transition-timing-function: ease; /* Para der uma suavisada na transição */
+    transition-timing-function: ease; /* Para dar uma suavizada na transição */
 }
 
 section#login > div#imagem {
@@ -51,5 +51,14 @@ section#login > div#imagem {
 section#login > div#formulario {
     display: block;
     padding: 10px;
+}
+
+div#formulario >h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div#formulario > p {
+    font-size: 0.8em;
 }
 
