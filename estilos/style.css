@@ -27,8 +27,7 @@ main {
 section#login {
     position: absolute; /* Para centralizar topo, esquerda -50%, -50% */
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 50%;    
     overflow: hidden; /*Tudo que estiver dentro do cover vai ficar arredondado*/
 
     background-color: white;
@@ -36,6 +35,7 @@ section#login {
     height: 515px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450); /*Borda sem espalhamento*/
+    transform: translate(-50%, -50%);
     transition: width .3s, heidth .3s; /* Animação entre na troca das telas */
     transition-timing-function: ease; /* Para dar uma suavizada na transição */
 }
@@ -64,16 +64,42 @@ div#formulario > p {
 
 form > div.campo {
     background-color: #5f2c82;
+    border: 1px solid #5f2c82;
     display: block;
     width: 100%;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 8px;
     padding-top: 9px;
     margin: 5px 0px;   /* As bordas de cima de de baixo ficaraõ com 5px direita e esquerda 0px*/
 }
 
 div.campo > label {
     display: none;      /* Retirar os nomes login e senha*/
+}
+
+div.campo > i {
+    color: white;
+    /*background-color: black;*/
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input {
+    background-color: #94cfcd;
+    font-size: 1em;
+    width: calc(100% - 38px); /* calcular a diferença desse width do width da div.campo > i acima*/
+    height: 100%;    
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-19px); /* Para subir e comcaixar no campo*/
+}
+
+div.campo > input:focus-within {    /* Para quando estiver digitando o campo ficar na cor branca */
+    background-color: white;
+    border: none;
+
 }
 
 form > input[type=submit] {
